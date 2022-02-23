@@ -5,3 +5,5 @@ for ( let left of numbers) {
         // Put your code here
     }
 }
+// Ejercicio 9
+
