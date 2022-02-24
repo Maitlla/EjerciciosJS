@@ -16,7 +16,6 @@ for (let i = 0; i < numbers1.length; i++) { // recorro el Array
         min = numbers1[i];  // se asigna (se guarda) ese valor en la variable min
     }
 }
-
 console.log(min)
 */
 
