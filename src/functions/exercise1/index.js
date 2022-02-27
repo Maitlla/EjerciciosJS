@@ -26,9 +26,9 @@ const numbers2 = [22,7,4,3,5,7,8,9,12,11];
 const numbers3 = [22,6,4,4,5,7,8,9,12,11];
 const numbers4 = [22,9,6,8,5,7,8,9,12,11];
  
-
+// Devuelve el menor valor del array que se le pasa
 function minorValue(numbers1) { // function minorValue() vale para cualquier Array que se le pase, 
-                                // le puedo pasar numbers1 o llamarla miArray para realizar la function
+                               
     let min = numbers1[0];
 
     for (let i = 0; i < numbers1.length; i++) {
@@ -36,8 +36,8 @@ function minorValue(numbers1) { // function minorValue() vale para cualquier Arr
             min = numbers1[i];
         }
     }
+    console.log(min);
     return min; // retorno el valor guardado en la variable min
-    console.log(min)
 }
 
 const minor1 = minorValue(numbers1); // llamo a la function minorValue(numbers1)
