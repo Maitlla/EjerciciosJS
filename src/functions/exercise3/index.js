@@ -2,11 +2,10 @@
 // conseguir una función que calcule la raíz cuadrada, 
 // a menos que se le indique otra potencia
 
-
 function calculaPotencia(number,potencia) {
     // si potencia esta sin definir
     if(potencia === undefined) { 
-        // asigno un medio a potencia (raiz cuadrada)
+        // asigno un medio a potencia (raíz cuadrada)
         potencia = 1/2; 
     }
     return Math.pow(number,potencia);
@@ -17,8 +16,7 @@ console.log(calculaPotencia(8, 1 / 3))
 console.log(calculaPotencia(2, 3))
 console.log(calculaPotencia(5, 2))
 
-
-// return Math.sqrt(number;
+// return Math.sqrt(number; // devuelve raíz cuadrada
     /*
         let elevado = 5 ** 2;
         5 ** 2 // -> 25 elevado al cuadrado
