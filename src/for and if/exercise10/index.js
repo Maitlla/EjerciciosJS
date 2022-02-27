@@ -8,11 +8,9 @@ console.log(numbers)
 for (let i = 0; i < numbers.length; i++) {
     for (let j = i + 1; j < numbers.length; j++) {
         if (numbers[i] > numbers[j]) { 
-            // null como hueco o valor vacío, se lo asigno a la variable casilla
-            //casilla = null; 
-            // asigno la posición de [i] en el Array numbers a la variable casilla
+            // asigno (copio) la posición de [i] en el Array numbers a la variable casilla
             let casilla = numbers[i];
-            // asigno la posición de [j] en el Array, a la posición de [i] en este caso
+            // asigno la posición de [j] a la posición de [i] en el Array, en este caso
             // es que paso el número que esta en segundo lugar al primer lugar
             numbers[i] = numbers[j];
             // la variable casilla que tenía asignada la posición de [i] en el Array,
