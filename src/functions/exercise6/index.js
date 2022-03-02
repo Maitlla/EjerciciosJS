@@ -1,7 +1,18 @@
 // Functions 6
+// OPCIÓN A
+// Entre dos índices del Array numbers ordeno esa parte de manera ascendente
+
+
+
+// OPCIÓN B
 // Ordeno el Array numbers de manera ascendente, y entre dos índices del array me quedo con número menor
 
-const numbers = [11, 9, 13, 12]
+const numbers = [11, 9, 13, 2, 5, 4, 9, 22, 12, 0, 16, 12, 35, 8, 74]
+// Función flecha
+//numbers.sort((a,b) => {return a-b});
+// Función anónima
+//numbers.sort(function(a,b) {return a-b});
+
 // La función comparar me sirve para ordenar de manera ascendente cuando llame a la función .sort()
 function comparar(a, b) {
     return a - b;
@@ -30,6 +41,6 @@ console.log(numbers);
 // Una vez ordenado el Array numbers, llamo a la función minorInRange
 // pasandole índice posicionInicial y índice posicionFinal, entre los que busco el número menor
 console.log(minorInRange(0, 3, numbers));
-console.log(minorInRange(2, 3, numbers));
-console.log(minorInRange(1, 3, numbers));
+console.log(minorInRange(4, 9, numbers));
+console.log(minorInRange(1, 5, numbers));
 
