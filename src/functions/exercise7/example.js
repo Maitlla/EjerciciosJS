@@ -9,6 +9,7 @@ function minorInRange (start, end, array) {
     for (let idx = start+1; idx < end; idx++) {
         if ( array[minorIdx] > array[idx] ) {
             minorIdx = idx;
+            console.log(numbers);
         }
     }
     return minorIdx
