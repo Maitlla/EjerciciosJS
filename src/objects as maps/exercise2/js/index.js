@@ -30,7 +30,7 @@ const chrono = [
 // function(a, b) a - b (lo ordena de manera ascendente)     b - a (lo ordena de manera descendente)
 chrono.sort(function (a, b) {return a.time - b.time;});
 // para cada corredor del Array chrono se llama a su propiedades name y time
-for (runner of chrono) {
+for (let runner of chrono) {
     console.log(runner.name, runner.time);
 }
 
@@ -41,19 +41,14 @@ Luisa 103.39
 Pablo 105.82
 Pedro 109.09  */
 
-function dataToHTMLList(array) { // no se pinta el Html 
-    const HTMLElements = array.map(
+function dataToHTMLList(chrono) { // pinto la lista de los corredores ya ordenada
+    const HTMLElements = chrono.map(
         (item) => {
-            const ul = document.createElement("ul");
-            const liName = document.createElement("li");
-            const liTime = document.createElement("li");
-            ul.append(liName, liTime);
-            liName.innerText = item.name;
-            liTime.innerText = item.time;
-            return ul;
+            const li = document.createElement("li");
+            li.innerText = item.name + " " + item.time;
+            return li;
         }
     )
     document.querySelector("#list").append(...HTMLElements);
 }
-
-
+dataToHTMLList(chrono);
