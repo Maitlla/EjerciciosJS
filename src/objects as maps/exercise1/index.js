@@ -6,21 +6,22 @@ const counters = {}; // Objeto counters tiene propiedades {a: 0, b: 0, c:0 .....
 function countLetter (letter, counters) {
     // El método hasOwnProperty() devuelve un booleano indicando si el objeto tiene la propiedad especificada
     // obj.hasOwnProperty(prop)
-    if(counters.hasOwnProperty(letter) === false){
+    if(counters.hasOwnProperty(letter) === false){ 
+        // si no hay letra repetida se cuenta solo esa 
         counters[letter] = 1;
     }else{
+        // cada vez que encuentra la misma letra suma una más al contador
         counters[letter]++;
     }  
- 
-
 }
+// para cada letra del Array phrase llamo a la function countLetter (letter, counters)
 for (letter of phrase) {
     console.log(letter)
     countLetter(letter, counters)
 }
-console.log((counters))
-console.log(JSON.stringify(counters))
-
+console.log((counters)) // devuelve {N: 1, o: 3,  : 7, h: 1, a: 3, …}
+console.log(JSON.stringify(counters)) // devuelve
+// {"N":1,"o":3," ":7,"h":1,"a":3,"y":1,"b":1,"i":1,"e":3,"n":3,"q":1,"u":1,"p":1,"r":1,"m":1,"l":1,"v":1,"g":1}
 
 
 
