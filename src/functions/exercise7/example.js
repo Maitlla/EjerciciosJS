@@ -1,3 +1,19 @@
+// Funciones exercise 7
+// Función recursiva ejemplo - contar elementos HTML y sus hijos
+function contarElmentosHtml(element) { 
+    let total = 1;
+    for(let i=0; i<element.children.length; i++){
+        total = total + contarElmentosHtml(element.children[i]);
+    }
+    return total;
+}
+const elemntoHtml = document.querySelector("html");
+console.log(elemntoHtml)
+console.log(contarElmentosHtml(elemntoHtml));
+
+
+
+
 const numbers = [11,9,13,12,0,2,99,2,34,5,4,9,22,16,76,35,75,2,35,8,74]
 
 function minorInRange (start, end, array) {
@@ -30,3 +46,7 @@ function sort (array, start = 0) {
 sort(numbers);
 
 console.log(numbers);
+
+
+
+
