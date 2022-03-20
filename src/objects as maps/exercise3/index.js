@@ -24,32 +24,23 @@ const people = [
     },
 ]
 
-            //   NO los oredena
-function aFasterThanB(runnerA, runnnerB) {
-    if (runnerA.time < runnnerB.time) {
-        return true;
-    }else {
-        return false;
-    }
-    
+function aFasterThanB(runnerA, runnerB) {
+    return (runnerA.time > runnerB.time); // retorna true si runnerA es mayor que runnerB, si no false  
 }
 
 function bFasterThanA(runnerA, runnerB) {
-    if (runnerA.time > runnerB.time) {
-        return true;
-    }else {
-        return false;
-    }
+    return(runnerB.time > runnerA.time); // retorna true si runnerB es mayor que runnerA, si no false 
 }
 
-function swap (runnerA, runnerB, array) {
-    //let temporal = null;
-    temporal = array[runnerA.time];
-    array[runnerA.time] = array[runnerB.time];
-    array[runnerB.time] = temporal;
+function swap (idxA, idxB, array) { // función para cambio de posiciones en un Array 
+    let temporal = array[idxA];
+    array[idxA] = array[idxB];
+    array[idxB] = temporal;
 }
 
-function sort (comparator, array) {
+// función comparación tipo burbuja, compara posición [A] con la siguiente [B], ordenando valor de menor a mayor, en este caso
+// y despues compara [B] con [C] ..... y así sucesivamente
+function sort (comparator, array) { 
     for ( let currentIdx = 0 ; currentIdx < array.length-1 ; currentIdx++) {
         for ( let nextIdx = currentIdx+1 ; nextIdx < array.length ; nextIdx++ ) {
             // si el resultado de comparar el indice actual (currentIdx) y el suguiente (nextIdx) es true
@@ -62,13 +53,10 @@ function sort (comparator, array) {
 }
 
 sort(aFasterThanB, people);
-console.log("Runner de menor a mayor ", JSON.stringify(people));
+console.log("Runner de menor a mayor ", JSON.stringify(people)); // JSON.stringify() se ven los objetos por consola, sin no se ve así [{}]
 sort(bFasterThanA, people);
 console.log("Runner de mayor a menor ", JSON.stringify(people));
 
-//sort(aFasterThanB, people);
-//console.log(people);
-//sort(bFasterThanA, people);
-//console.log(people);
+
 
 
